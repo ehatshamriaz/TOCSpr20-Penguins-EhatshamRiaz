@@ -19,7 +19,7 @@ public class PenguinAcademy : Academy
     /// </summary>
     public override void InitializeAcademy()
     {
-        FishSpeed = 0f;
+        FishSpeed = 1f;
         FeedRadius = 0f;
 
         // Set up code to be called every time the fish_speed parameter changes 
