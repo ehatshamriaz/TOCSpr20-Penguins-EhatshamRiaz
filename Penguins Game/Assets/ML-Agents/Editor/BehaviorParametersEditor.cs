@@ -61,7 +61,7 @@ namespace MLAgents
             var model = (NNModel)serializedObject.FindProperty("m_Model").objectReferenceValue;
             var behaviorParameters = (BehaviorParameters)target;
             SensorComponent[] sensorComponents;
-            if(behaviorParameters.useChildSensors)
+            if (behaviorParameters.useChildSensors)
             {
                 sensorComponents = behaviorParameters.GetComponentsInChildren<SensorComponent>();
             }
@@ -72,7 +72,8 @@ namespace MLAgents
             var brainParameters = behaviorParameters.brainParameters;
             if (model != null)
             {
-                barracudaModel = ModelLoader.Load(model.Value);
+                // barracudaModel = ModelLoader.Load(model.Value);
+                barracudaModel = ModelLoader.Load(model);
             }
             if (brainParameters != null)
             {
